@@ -13,6 +13,7 @@ class TicTacToe
     [0,4,8], #topL -> botR
     [2,4,6]  #topR -> botL
   ]
+  #[ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
   
   def initialize
     @board = Array.new(9, " ")
@@ -63,5 +64,28 @@ class TicTacToe
     turn_count%2==0 ? "X" : "O"
   end
   
+  def won?
+    WIN_COMBINATIONS.each do |win_combo|
+      negO_or_threeX = 0 # "O" = -1, "X" = 1: -3 means "O" wins, 3 means "X" wins
+      win_combo.each do |position|
+        #binding.pry
+        negO_or_threeX +=1 if @board[position]=="X"
+        negO_or_threeX -=1 if @board[position]=="O"
+      end
+      if negO_or_threeX == 3 # "X" wins
+        return win_combo
+      elsif negO_or_threeX == -3 # "O" wins
+        return win_combo
+      end
+    end
+    nil
+  end
 
+  def full?
+    turn_count==9 ? true : false
+  end
+  
+  def over?
+    won? && full?
+  end
 end
