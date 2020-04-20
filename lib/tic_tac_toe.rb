@@ -85,7 +85,15 @@ class TicTacToe
     turn_count==9 ? true : false
   end
   
+  def draw?
+    full? && !won?
+  end
+  
   def over?
-    won? && full?
+    draw? || won? && full?
+  end
+  
+  def winner
+    @board[won?[0]] if won?
   end
 end
