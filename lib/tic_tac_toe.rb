@@ -117,7 +117,7 @@ end
     while 42 do
       turn
       
-      "draw?
+      draw?
       
       
     end
