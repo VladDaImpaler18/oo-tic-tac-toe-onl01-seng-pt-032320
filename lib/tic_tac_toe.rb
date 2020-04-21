@@ -114,13 +114,13 @@ end
 ```
 
   def play
-    while 42 do
-      turn
-      if over?
-        winner if won?
-        "Draw!" if draw?
-      end
-    end
+    #while 42 do
+      #turn
+      #if over?
+        #winner if won?
+        #"Draw!" if draw?
+      #end
+    #end
   end
   
 end
