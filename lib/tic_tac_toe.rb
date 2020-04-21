@@ -114,6 +114,7 @@ end
 ```
 
   def play
+    binding.pry
     #while 42 do
       #turn
       #if over?
