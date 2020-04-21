@@ -116,8 +116,10 @@ end
   def play
     while 42 do
       turn
-      
-      draw?
+      if over?
+        winner if won?
+        "Draw!" if draw?
+    end
       
       
     end
