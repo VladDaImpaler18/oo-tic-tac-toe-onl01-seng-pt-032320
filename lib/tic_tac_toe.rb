@@ -102,14 +102,14 @@ class TicTacToe
 #The play method is the main method of the Tic Tac Toe application and is responsible for the game loop. A Tic Tac Toe game must allow players to take turns, checking if the game is over after every turn. At the conclusion of the game, whether because it was won or ended in a draw, the game should report to the user the outcome of the game. You can imagine the pseudocode:
 
   def play
-    binding.pry
-    #while 42 do
-      #turn
-      #if over?
-        #winner if won?
-        #"Draw!" if draw?
-      #end
-    #end
+    #binding.pry
+    while 42 do
+      turn
+      if over?
+        winner if won?
+        "Draw!" if draw?
+      end
+    end
   end
   
   
