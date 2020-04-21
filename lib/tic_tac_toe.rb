@@ -112,9 +112,15 @@ else if the game was a draw
   tell the players it ended in a draw
 end
 ```
-while !over? do
-  
-  
-end
 
+  def play
+    while 42 do
+      turn
+      
+      "draw?
+      
+      
+    end
+  end
+  
 end
