@@ -119,9 +119,7 @@ end
       if over?
         winner if won?
         "Draw!" if draw?
-    end
-      
-      
+      end
     end
   end
   
